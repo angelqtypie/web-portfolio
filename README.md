@@ -10,7 +10,7 @@
 
 ## About the Portfolio Website
 
-This website is my **personal portfolio**, showcasing my skills, projects, and journey as a **Web Systems Developer**.  
+This website is my **personal portfolio**, showcasing my skills, projects, and journey as a **BSIT-Student/Web Systems Developer**.  
 
 It includes:
 
@@ -18,7 +18,7 @@ It includes:
 - **Hero Section:** Short introduction with profile image and description.
 - **Projects Section:** Highlights projects with live links.
 - **Tech Stack:** Displays the technologies and tools I use.
-- **Journey Section:** Shows my educational path and areas of interest.
+- **Journey Section:** Shows my educational path and my areas of interest.
 - **Contact Section:** Visitors can send messages via a secure EmailJS form.
 
 ---
