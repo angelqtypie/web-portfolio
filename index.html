@@ -3,21 +3,25 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Angel Justin Ballaso | Portfolio</title>
+  <title>Angel Justine Ballaso | Portfolio</title>
 
   <!-- UI Libraries -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
 
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
+<!-- Navigation -->
 <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
   <div class="container">
-    <a class="navbar-brand fw-bold" href="#">AJB</a>
+    <a class="navbar-brand fw-bold" href="#">
+      <i class="bi bi-code-slash"></i> AJB
+    </a>
     <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navMenu">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -33,106 +37,363 @@
   </div>
 </nav>
 
+<!-- Hero Section -->
 <section id="home" class="hero">
-    <div class="hero-bg"></div>
-    <div class="container text-center hero-content" data-aos="fade-up">
-    <img src="images/profile.jpg" class="profile-img mb-4" alt="Profile">
+  <div class="hero-bg"></div>
+  <div class="container text-center hero-content" data-aos="fade-up">
+    <img src="images/profile.jpg" class="profile-img mb-4 animate__animated animate__zoomIn" alt="Profile">
     <h1 class="hero-title">
       Hi, I'm <span>Angel Justine Ballaso</span>
     </h1>
     <p class="hero-role">
-      BSIT Student • Web Systems Developer
+      <i class="bi bi-mortarboard-fill"></i> BSIT Student • 
+      <i class="bi bi-laptop"></i> Web Systems Developer
     </p>
     <p class="hero-desc">
-        I build simple and functional web systems with a focus on real-world use and user experience.
-      </p>
+      I build simple and functional web systems with a focus on real-world use and user experience.
+    </p>
     <div class="mt-4">
-      <a href="#projects" class="btn btn-main me-2">View My Work</a>
-      <a href="#contact" class="btn btn-outline-success">Contact Me</a>
+      <a href="#projects" class="btn btn-main me-2">
+        <i class="bi bi-collection"></i> View My Work
+      </a>
+      <a href="#contact" class="btn btn-outline-success">
+        <i class="bi bi-envelope"></i> Contact Me
+      </a>
+    </div>
+    
+    <!-- Social Links -->
+    <div class="social-links mt-4">
+      <a href="https://www.facebook.com/eyn.gylii" target="_blank" class="social-icon">
+        <i class="bi bi-facebook"></i>
+      </a>
+      <a href="https://github.com/yourusername" target="_blank" class="social-icon">
+        <i class="bi bi-github"></i>
+      </a>
+      <a href="mailto:20221742@nbsc.edu.ph" class="social-icon">
+        <i class="bi bi-envelope-fill"></i>
+      </a>
+    </div>
+  </div>
+
+  <div class="scroll-indicator">
+    <i class="bi bi-chevron-down"></i>
+  </div>
+</section>
+
+
+<section class="stats-section py-4">
+  <div class="container">
+    <div class="row text-center g-4">
+      <div class="col-md-4" data-aos="fade-up" data-aos-delay="0">
+        <div class="stat-card">
+          <i class="bi bi-code-square stat-icon"></i>
+          <h3 class="stat-number" data-target="2">0</h3>
+          <p class="stat-label">Projects Completed</p>
+        </div>
+      </div>
+      <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+        <div class="stat-card">
+          <i class="bi bi-layers stat-icon"></i>
+          <h3 class="stat-number" data-target="8">0</h3>
+          <p class="stat-label">Technologies Used</p>
+        </div>
+      </div>
+      <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+        <div class="stat-card">
+          <i class="bi bi-cup-hot stat-icon"></i>
+          <h3 class="stat-number" data-target="100">0</h3>
+          <p class="stat-label">Cups of Coffee</p>
+        </div>
+      </div>
     </div>
   </div>
 </section>
 
 
 <section id="projects" class="container py-5 section-soft">
-  <h2 class="section-title" data-aos="fade-right">Selected Work</h2>
+  <h2 class="section-title" data-aos="fade-right">
+    <i class="bi bi-folder-fill"></i> Selected Work
+  </h2>
+  <p class="section-subtitle" data-aos="fade-right">Click on each project to view the live system</p>
 
   <div class="row g-4">
-    <div class="col-md-6" data-aos="fade-up">
+    <!-- Capstone Project -->
+    <div class="col-md-6" data-aos="fade-up" data-aos-delay="0">
       <div class="project-card p-4 h-100">
-        <h5 class="project-title">E-NanayCare</h5>
+        <div class="project-badge capstone-badge">Capstone Project</div>
+        <div class="project-icon">
+          <i class="bi bi-heart-pulse-fill"></i>
+        </div>
+        <h5 class="project-title">
+          <a href="https://angelqtypie.github.io/eNanayCare/landingpage" target="_blank" class="project-link">
+            E-NanayCare
+            <i class="bi bi-box-arrow-up-right ms-2"></i>
+          </a>
+        </h5>
         <p class="project-subtitle">
           Maternal Health Monitoring Web Application
         </p>
         <p class="project-text">
-            E-NanayCare is a web application developed as an academic project focused on maternal health monitoring. The system allows health workers to manage records, track appointments, and provide basic health guidance.
-
-            Through this project, I applied authentication, dashboard design, and database handling while addressing a real community-based need.
-          </p>
+          E-NanayCare is a web application developed as my capstone project focused on maternal health monitoring. The system allows health workers to manage records, track appointments, and provide basic health guidance.
+        </p>
+        <div class="project-features mb-3">
+          <div class="feature-item">
+            <i class="bi bi-check-circle-fill"></i> User Authentication
+          </div>
+          <div class="feature-item">
+            <i class="bi bi-check-circle-fill"></i> Appointment Scheduling
+          </div>
+          <div class="feature-item">
+            <i class="bi bi-check-circle-fill"></i> Health Records Management
+          </div>
+        </div>
         <div class="project-tags">
-          <span>Ionic React</span>
-          <span>Supabase</span>
-          <span>JavaScript</span>
+          <span><i class="bi bi-lightning-charge-fill"></i> Ionic React</span>
+          <span><i class="bi bi-database"></i> Supabase</span>
+          <span><i class="bi bi-filetype-js"></i> JavaScript</span>
         </div>
       </div>
     </div>
 
-    <div class="col-md-6" data-aos="fade-up">
+    <!-- Activity Project -->
+    <div class="col-md-6" data-aos="fade-up" data-aos-delay="100">
       <div class="project-card p-4 h-100">
-        <h5 class="project-title">RIPSEC BIA System</h5>
+        <div class="project-badge activity-badge">Class Activity</div>
+        <div class="project-icon">
+          <i class="bi bi-graph-up-arrow"></i>
+        </div>
+        <h5 class="project-title">
+          <a href="https://angelqtypie.github.io/ias/#/auth" target="_blank" class="project-link">
+            RIPSEC BIA System
+            <i class="bi bi-box-arrow-up-right ms-2"></i>
+          </a>
+        </h5>
         <p class="project-subtitle">
           Business Impact Analysis Dashboard
         </p>
         <p class="project-text">
-            The RIPSEC BIA System is a web-based Business Impact Analysis tool created as a minor project. It is designed to help users submit, manage, and review BIA reports through a simple dashboard interface.
-
-            This project helped me improve my understanding of structured data, reporting flow, and system organization.
+          The RIPSEC BIA System is a web-based Business Impact Analysis tool created as a class activity. It is designed to help users submit, manage, and review BIA reports through a simple dashboard interface.
         </p>
+        <div class="project-features mb-3">
+          <div class="feature-item">
+            <i class="bi bi-check-circle-fill"></i> Report Management
+          </div>
+          <div class="feature-item">
+            <i class="bi bi-check-circle-fill"></i> Dashboard Analytics
+          </div>
+          <div class="feature-item">
+            <i class="bi bi-check-circle-fill"></i> Data Visualization
+          </div>
+        </div>
         <div class="project-tags">
-          <span>React</span>
-          <span>Supabase</span>
-          <span>SQL</span>
+          <span><i class="bi bi-react"></i> React</span>
+          <span><i class="bi bi-database"></i> Supabase</span>
+          <span><i class="bi bi-filetype-sql"></i> SQL</span>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-
+<!-- Tech Stack Section -->
 <section id="stack" class="container py-5">
-  <h2 class="section-title" data-aos="fade-right">Tools & Technologies</h2>
-  <div class="stack-grid" data-aos="fade-up">
-    <span>HTML</span><span>CSS</span><span>JavaScript</span>
-    <span>Bootstrap</span><span>Ionic React</span>
-    <span>Supabase</span><span>SQL</span><span>GitHub</span>
+  <h2 class="section-title" data-aos="fade-right">
+    <i class="bi bi-tools"></i> Tools & Technologies
+  </h2>
+  <p class="section-subtitle" data-aos="fade-right">Technologies I work with</p>
+  
+  <div class="row g-4 mt-3">
+    <div class="col-md-4" data-aos="fade-up" data-aos-delay="0">
+      <div class="tech-category">
+        <h5 class="tech-category-title">
+          <i class="bi bi-palette-fill"></i> Frontend
+        </h5>
+        <div class="stack-grid">
+          <span class="tech-item"><i class="bi bi-filetype-html"></i> HTML</span>
+          <span class="tech-item"><i class="bi bi-filetype-css"></i> CSS</span>
+          <span class="tech-item"><i class="bi bi-filetype-js"></i> JavaScript</span>
+          <span class="tech-item"><i class="bi bi-bootstrap"></i> Bootstrap</span>
+          <span class="tech-item"><i class="bi bi-lightning-charge"></i> Ionic React</span>
+        </div>
+      </div>
+    </div>
+    
+    <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+      <div class="tech-category">
+        <h5 class="tech-category-title">
+          <i class="bi bi-server"></i> Backend & Database
+        </h5>
+        <div class="stack-grid">
+          <span class="tech-item"><i class="bi bi-database"></i> Supabase</span>
+          <span class="tech-item"><i class="bi bi-filetype-sql"></i> SQL</span>
+        </div>
+      </div>
+    </div>
+    
+    <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+      <div class="tech-category">
+        <h5 class="tech-category-title">
+          <i class="bi bi-tools"></i> Tools & Platforms
+        </h5>
+        <div class="stack-grid">
+          <span class="tech-item"><i class="bi bi-github"></i> GitHub</span>
+          <span class="tech-item"><i class="bi bi-git"></i> Git</span>
+        </div>
+      </div>
+    </div>
   </div>
 </section>
 
-
+<!-- Journey Section -->
 <section id="journey" class="container py-5 section-soft">
-  <h2 class="section-title" data-aos="fade-right">My Journey</h2>
-  <p class="journey-text" data-aos="fade-up">
-    I am currently a 4th year BS Information Technology student at Northern Bukidnon State College. During my studies, I worked on academic projects that helped me understand how web systems are planned, developed, and used in real-world situations.
-
-    My interests include web development, dashboard systems, and learning basic cybersecurity concepts. I am now preparing for my on-the-job training and looking forward to gaining hands-on experience in a real IT environment.</p>
+  <h2 class="section-title" data-aos="fade-right">
+    <i class="bi bi-map"></i> My Journey
+  </h2>
+  
+  <div class="timeline">
+    <div class="timeline-item" data-aos="fade-up">
+      <div class="timeline-icon">
+        <i class="bi bi-mortarboard-fill"></i>
+      </div>
+      <div class="timeline-content">
+        <h5>Current: 4th Year BSIT Student</h5>
+        <p class="timeline-location">Northern Bukidnon State College</p>
+        <p>Pursuing my Bachelor of Science in Information Technology degree, focusing on web development and system design.</p>
+      </div>
+    </div>
+    
+    <div class="timeline-item" data-aos="fade-up" data-aos-delay="100">
+      <div class="timeline-icon">
+        <i class="bi bi-code-square"></i>
+      </div>
+      <div class="timeline-content">
+        <h5>Academic Projects & Development</h5>
+        <p>Worked on multiple academic projects including E-NanayCare (capstone) and RIPSEC BIA System, gaining practical experience in full-stack development.</p>
+      </div>
+    </div>
+    
+    <div class="timeline-item" data-aos="fade-up" data-aos-delay="200">
+      <div class="timeline-icon">
+        <i class="bi bi-briefcase-fill"></i>
+      </div>
+      <div class="timeline-content">
+        <h5>Looking Forward: OJT & Career</h5>
+        <p>Preparing for on-the-job training and eager to gain hands-on experience in a professional IT environment.</p>
+      </div>
+    </div>
+  </div>
+  
+  <div class="interests-section mt-5" data-aos="fade-up">
+    <h4 class="interests-title">Areas of Interest</h4>
+    <div class="interests-grid">
+      <div class="interest-item">
+        <i class="bi bi-browser-chrome"></i>
+        <span>Web Development</span>
+      </div>
+      <div class="interest-item">
+        <i class="bi bi-bar-chart-line"></i>
+        <span>Dashboard Systems</span>
+      </div>
+      <div class="interest-item">
+        <i class="bi bi-shield-lock"></i>
+        <span>Cybersecurity</span>
+      </div>
+      <div class="interest-item">
+        <i class="bi bi-people"></i>
+        <span>UX Design</span>
+      </div>
+    </div>
+  </div>
 </section>
 
+<!-- Contact Section -->
 <section id="contact" class="container py-5">
-  <h2 class="section-title" data-aos="fade-right">Get in Touch</h2>
-  <ul class="contact-list" data-aos="fade-up">
-    <li><i class="bi bi-geo-alt"></i> Lunocan, Manolo Fortich, Bukidnon</li>
-    <li><i class="bi bi-phone"></i> 0947-6451-275</li>
-    <li><i class="bi bi-envelope"></i> 20221742@nbsc.edu.ph</li>
-    <li>
-      <i class="bi bi-facebook"></i>
-      <a href="https://www.facebook.com/eyn.gylii" target="_blank">Facebook</a>
-    </li>
-  </ul>
+  <h2 class="section-title" data-aos="fade-right">
+    <i class="bi bi-chat-dots"></i> Get in Touch
+  </h2>
+  <p class="section-subtitle" data-aos="fade-right">Feel free to reach out for collaboration or opportunities</p>
+  
+  <div class="row mt-4">
+    <div class="col-md-6" data-aos="fade-up">
+      <div class="contact-card">
+        <h5 class="contact-card-title">Contact Information</h5>
+        <ul class="contact-list">
+          <li>
+            <i class="bi bi-geo-alt-fill"></i>
+            <div>
+              <strong>Location</strong>
+              <p>Lunocan, Manolo Fortich, Bukidnon</p>
+            </div>
+          </li>
+          <li>
+            <i class="bi bi-phone-fill"></i>
+            <div>
+              <strong>Phone</strong>
+              <p><a href="tel:09476451275">0947-6451-275</a></p>
+            </div>
+          </li>
+          <li>
+            <i class="bi bi-envelope-fill"></i>
+            <div>
+              <strong>Email</strong>
+              <p><a href="mailto:20221742@nbsc.edu.ph">20221742@nbsc.edu.ph</a></p>
+            </div>
+          </li>
+          <li>
+            <i class="bi bi-facebook"></i>
+            <div>
+              <strong>Facebook</strong>
+              <p><a href="https://www.facebook.com/eyn.gylii" target="_blank">eyn.gylii</a></p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+    
+    <div class="col-md-6" data-aos="fade-up" data-aos-delay="100">
+      <div class="contact-card">
+        <h5 class="contact-card-title">Quick Message</h5>
+        <form id="contactForm" class="contact-form">
+          <div class="mb-3">
+            <input type="text" class="form-control" placeholder="Your Name" required>
+          </div>
+          <div class="mb-3">
+            <input type="email" class="form-control" placeholder="Your Email" required>
+          </div>
+          <div class="mb-3">
+            <textarea class="form-control" rows="4" placeholder="Your Message" required></textarea>
+          </div>
+          <button type="submit" class="btn btn-main w-100">
+            <i class="bi bi-send"></i> Send Message
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
 </section>
 
+<!-- Footer -->
 <footer class="text-center py-4">
-  <small>© 2026 Angel Justine Ballaso</small>
+  <div class="container">
+    <div class="footer-social mb-3">
+      <a href="https://www.facebook.com/eyn.gylii" target="_blank" class="footer-social-link">
+        <i class="bi bi-facebook"></i>
+      </a>
+      <a href="https://github.com/angelqtypie" target="_blank" class="footer-social-link">
+        <i class="bi bi-github"></i>
+      </a>
+      <a href="mailto:20221742@nbsc.edu.ph" class="footer-social-link">
+        <i class="bi bi-envelope-fill"></i>
+      </a>
+    </div>
+    <small>© 2026 Angel Justine Ballaso ></i></small>
+  </div>
 </footer>
+
+<!-- Back to Top Button -->
+<button id="backToTop" class="back-to-top">
+  <i class="bi bi-arrow-up"></i>
+</button>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
