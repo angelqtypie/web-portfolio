@@ -1,59 +1,48 @@
-// Initialize AOS
+
 AOS.init({
   once: true,
   duration: 600,
   easing: 'ease-out'
 });
 
-// Navbar scroll effect
+// 2 Navbar scroll effect
 const navbar = document.querySelector('.navbar');
-
 window.addEventListener('scroll', () => {
-  if (window.scrollY > 60) {
-    navbar.classList.add('nav-scrolled');
-  } else {
-    navbar.classList.remove('nav-scrolled');
-  }
+  if (window.scrollY > 60) navbar.classList.add('nav-scrolled');
+  else navbar.classList.remove('nav-scrolled');
 });
 
-// Smooth scroll for navigation
+//  Smooth scroll for navigation links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   anchor.addEventListener('click', function (e) {
     e.preventDefault();
     const target = document.querySelector(this.getAttribute('href'));
-    
     if (target) {
       window.scrollTo({
         top: target.offsetTop - 70,
         behavior: 'smooth'
       });
-      
-      // Close mobile menu
+      // Close mobile menu if open
       const navCollapse = document.querySelector('.navbar-collapse');
-      if (navCollapse.classList.contains('show')) {
-        navCollapse.classList.remove('show');
-      }
+      if (navCollapse.classList.contains('show')) navCollapse.classList.remove('show');
     }
   });
 });
 
-// Counter animation for stats
+
 function animateCounter(element, target) {
   let current = 0;
   const increment = target / 50;
-  
   const timer = setInterval(() => {
     current += increment;
     if (current >= target) {
       element.textContent = target;
       clearInterval(timer);
-    } else {
-      element.textContent = Math.floor(current);
-    }
+    } else element.textContent = Math.floor(current);
   }, 30);
 }
 
-// Observe stats section
+
 const statsObserver = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
@@ -67,45 +56,53 @@ const statsObserver = new IntersectionObserver((entries) => {
 });
 
 const statsSection = document.querySelector('.stats-section');
-if (statsSection) {
-  statsObserver.observe(statsSection);
-}
+if (statsSection) statsObserver.observe(statsSection);
 
 
-// Back to top button
 const backToTopButton = document.getElementById('backToTop');
-
 window.addEventListener('scroll', () => {
-  if (window.scrollY > 300) {
-    backToTopButton.classList.add('show');
-  } else {
-    backToTopButton.classList.remove('show');
-  }
+  if (window.scrollY > 300) backToTopButton.classList.add('show');
+  else backToTopButton.classList.remove('show');
 });
 
 backToTopButton.addEventListener('click', () => {
-  window.scrollTo({
-    top: 0,
-    behavior: 'smooth'
-  });
+  window.scrollTo({ top: 0, behavior: 'smooth' });
 });
 
-// Contact form
-const contactForm = document.getElementById('contactForm');
 
-if (contactForm) {
-  contactForm.addEventListener('submit', function(e) {
-    e.preventDefault();
-    alert('Thank you for your message! I will get back to you soon.');
-    this.reset();
-  });
-}
-
-// Update year in footer
 const yearElement = document.querySelector('footer small');
 if (yearElement) {
   const currentYear = new Date().getFullYear();
   yearElement.innerHTML = yearElement.innerHTML.replace('2026', currentYear);
 }
 
-console.log('Portfolio loaded successfully!');
+
+// Contact Form EmailJS Integration
+
+
+emailjs.init("dqAfm-F8W6usvDImk");
+
+const contactForm = document.getElementById('contactForm');
+
+if (contactForm) {
+  contactForm.addEventListener('submit', function (e) {
+    e.preventDefault();
+
+    // Send the form using EmailJS
+    emailjs.sendForm(
+      "service_cl7up6n", 
+      "template_79z6jap",  
+      this
+    )
+    .then(() => {
+      alert("Thank you! Your message has been sent.");
+      contactForm.reset();
+    })
+    .catch((error) => {
+      console.error("Failed to send message:", error);
+      alert("Oops! Something went wrong. Please try again.");
+    });
+  });
+}
+
+console.log('Portfolio loaded successfully with EmailJS!');
