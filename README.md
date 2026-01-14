@@ -2,7 +2,7 @@
 
 ![Portfolio Screenshot](https://github.com/angelqtypie/web-portfolio/blob/main/images/portfolio-screenshot.png)
 
-[![Portfolio Website](https://img.shields.io/badge/Website-Live-brightgreen)](https://angelqtypie.github.io/portfolio/) 
+[![Portfolio Website](https://img.shields.io/badge/Website-Live-brightgreen)](https://angelqtypie.github.io/web-portfolio/) 
 [![Email](https://img.shields.io/badge/Email-20221742%40nbsc.edu.ph-blue)](mailto:20221742@nbsc.edu.ph) 
 [![GitHub](https://img.shields.io/badge/GitHub-angelqtypie-black?logo=github)](https://github.com/angelqtypie)
 
